@@ -18,13 +18,13 @@ import pathlib
 
 nest_asyncio.apply()
 
-API_TOKEN = '7713660973:AAEJ98lGU1waiBmnnKglhkr_m3Guz8JUa_I'
-CHAT_ID = '1272169092'
+API_TOKEN = 'api-token'
+CHAT_ID = 'chat-id'
 
 with open('system_instructions.txt', 'r', encoding='utf-8') as file:
     system_instruction = file.read()
 
-genai.configure(api_key="AIzaSyAsAtbBi9mfv1y8AHKYsqKEQIpOqrAUkSM")
+genai.configure(api_key="api-key")
 model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
     system_instruction=system_instruction,
